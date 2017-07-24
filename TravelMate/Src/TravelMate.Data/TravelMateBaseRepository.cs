@@ -14,7 +14,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-					 connection.Open();
+						connection.Open();
 				return  connection.GetList<T>();
 			}
 		}
@@ -24,7 +24,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-				await	connection.OpenAsync();
+						await	connection.OpenAsync();
 				return await connection.GetListAsync<T>();
 			}
 		}
@@ -35,7 +35,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-					connection.Open();
+						connection.Open();
 				id= connection.Insert(member);
 			}
 			return GetById<T>(Convert.ToInt32(id));
@@ -47,7 +47,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-				await connection.OpenAsync();
+						await connection.OpenAsync();
 				id =await connection.InsertAsync(member);
 			}
 			return await GetByIdAsync<T>(Convert.ToInt32(id));
@@ -58,7 +58,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-					connection.Open();
+						connection.Open();
 				return  connection.Get<T>(item);
 			}
 		}
@@ -68,7 +68,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-				await	connection.OpenAsync();
+						await	connection.OpenAsync();
 				return await connection.GetAsync<T>(item);
 			}
 		}
@@ -78,7 +78,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-					connection.Open();
+						connection.Open();
 				connection.Update(item);
 			}
 		}
@@ -88,7 +88,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-				await	connection.OpenAsync();
+						await	connection.OpenAsync();
 			 await	connection.UpdateAsync(item);
 			}
 		}
@@ -98,7 +98,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection( ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-					connection.Open();
+						connection.Open();
 				connection.Delete(item);
 			}
 		}
@@ -108,7 +108,7 @@ namespace TravelMate.Data
 			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
 			{
 				if (connection.State != ConnectionState.Open)
-				await	connection.OpenAsync();
+						await	connection.OpenAsync();
 			await	connection.DeleteAsync(item);
 			}
 		}
