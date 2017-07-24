@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +41,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessLevel.cs" />
+    <Compile Include="BatteryType.cs" />
+    <Compile Include="VehicleType.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyType.cs" />
+    <Compile Include="ConfigurationInformation.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Expense.cs" />
+    <Compile Include="Faculty.cs" />
+    <Compile Include="Fuel.cs" />
+    <Compile Include="FuelPurchase.cs" />
+    <Compile Include="GatePass.cs" />
+    <Compile Include="Insurance.cs" />
+    <Compile Include="InsuranceType.cs" />
+    <Compile Include="IssuedSparePart.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="LicenseType.cs" />
+    <Compile Include="LogBook.cs" />
+    <Compile Include="Repair.cs" />
+    <Compile Include="RepairsPayment.cs" />
+    <Compile Include="RepairType.cs" />
+    <Compile Include="RoadWorthy.cs" />
+    <Compile Include="SparePart.cs" />
+    <Compile Include="Staff.cs" />
+    <Compile Include="StaffDesignation.cs" />
+    <Compile Include="TyreType.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleInsurance.cs" />
+    <Compile Include="VehicleTranmission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
