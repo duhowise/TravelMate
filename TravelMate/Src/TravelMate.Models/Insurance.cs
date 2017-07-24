@@ -11,7 +11,7 @@ namespace TravelMate.Models
 	public  class Insurance
 	{
 		[Key]
-		public  int ID { get; set; }
+		public  int Id { get; set; }
 		public  int? VehicleId { get; set; }
 		public  string PolicyNo { get; set; }
 		public  string Com { get; set; }
