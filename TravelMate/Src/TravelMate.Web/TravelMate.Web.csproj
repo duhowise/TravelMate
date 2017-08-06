@@ -246,6 +246,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TravelMate.Data\TravelMate.Data.csproj">
+      <Project>{2b1064bb-b7b5-4bb3-9750-5b05b9c77011}</Project>
+      <Name>TravelMate.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TravelMate.Models\TravelMate.Models.csproj">
+      <Project>{3155755f-e724-421f-9da9-a92df67d1cb7}</Project>
+      <Name>TravelMate.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
