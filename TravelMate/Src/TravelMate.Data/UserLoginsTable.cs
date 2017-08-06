@@ -5,6 +5,9 @@ using Microsoft.AspNet.Identity;
 
 namespace TravelMate.Data
 {
+	/// <summary>
+	/// Class that represents the UserLogins table in the Database
+	/// </summary>
 	public class UserLoginsTable
 	{
 		private DbManager db;
@@ -26,8 +29,8 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Delete(IdentityMember member, UserLoginInfo login)
 		{
-			db.Connection.Execute(@"Delete from MemberLogin 
-					where UserId = @userId 
+			db.Connection.Execute(@"Delete from IdentityUserLogins 
+					where UserID = @userId 
 					and LoginProvider = @loginProvider 
 					and ProviderKey = @providerKey",
 				new
@@ -45,8 +48,8 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Delete(int userId)
 		{
-			db.Connection.Execute(@"Delete from MemberLogin 
-					where UserId = @userId", new { userId = userId });
+			db.Connection.Execute(@"Delete from IdentityUserLogins 
+					where UserID = @userId", new { userId = userId });
 		}
 
 		/// <summary>
@@ -57,8 +60,8 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Insert(IdentityMember member, UserLoginInfo login)
 		{
-			db.Connection.Execute(@"Insert into MemberLogin 
-				(LoginProvider, ProviderKey, UserId) 
+			db.Connection.Execute(@"Insert into IdentityUserLogins 
+				(LoginProvider, ProviderKey, UserID) 
 				values (@loginProvider, @providerKey, @userId)",
 				new
 				{
@@ -75,7 +78,7 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public int FindUserIdByLogin(UserLoginInfo MemberLogin)
 		{
-			return db.Connection.ExecuteScalar<int>(@"Select UserId from MemberLogin 
+			return db.Connection.ExecuteScalar<int>(@"Select UserID from IdentityUserLogins 
 				where LoginProvider = @loginProvider and ProviderKey = @providerKey",
 				new
 				{
@@ -91,8 +94,21 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public List<UserLoginInfo> FindByUserId(int memberId)
 		{
-			return db.Connection.Query<UserLoginInfo>("Select * from MemberLogin where MemberId = @memberId", new { memberId = memberId })
+			return db.Connection.Query<UserLoginInfoEx>("Select * from IdentityUserLogins where UserID = @memberId", new { memberId = memberId })
+				.Select(user => new UserLoginInfo(user.LoginProvider, user.ProviderKey))
 				.ToList();
 		}
+	}
+	public class UserLoginInfoEx
+	{
+		/// <summary>
+		///     Provider for the linked login, i.e. Facebook, Google, etc.
+		/// </summary>
+		public string LoginProvider { get; set; }
+
+		/// <summary>
+		///     User specific key for the login provider
+		/// </summary>
+		public string ProviderKey { get; set; }
 	}
 }

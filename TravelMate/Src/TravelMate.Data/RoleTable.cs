@@ -2,6 +2,9 @@ using Dapper;
 
 namespace TravelMate.Data
 {
+	/// <summary>
+	/// Class that represents the Role table in the Database
+	/// </summary>
 	public class RoleTable
 	{
 		private DbManager db;
@@ -21,7 +24,7 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Delete(int roleId)
 		{
-			db.Connection.Execute(@"Delete from Role where Id = @id", new { id = roleId });
+			db.Connection.Execute(@"Delete from IdentityRoles where Id = @id", new { id = roleId });
 		}
 
 		/// <summary>
@@ -31,7 +34,7 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Insert(IdentityRole role)
 		{
-			db.Connection.Execute(@"Insert into Role (Name) values (@name)",
+			db.Connection.Execute(@"Insert into IdentityUserRoles (Name) values (@name)",
 				new { name = role.Name });
 		}
 
@@ -42,7 +45,7 @@ namespace TravelMate.Data
 		/// <returns>Role name</returns>
 		public string GetRoleName(int roleId)
 		{
-			return db.Connection.ExecuteScalar<string>("Select Name from Role where Id=@id", new { id = roleId });
+			return db.Connection.ExecuteScalar<string>("Select Name from IdentityRoles where Id=@id", new { id = roleId });
 		}
 
 		/// <summary>
@@ -52,7 +55,7 @@ namespace TravelMate.Data
 		/// <returns>Role's Id</returns>
 		public int GetRoleId(string roleName)
 		{
-			return db.Connection.ExecuteScalar<int>("Select Id from Role where Name=@name", new { name = roleName });
+			return db.Connection.ExecuteScalar<int>("Select Id from IdentityRoles where Name=@name", new { name = roleName });
 		}
 
 		/// <summary>
@@ -95,11 +98,11 @@ namespace TravelMate.Data
 		{
 			db.Connection
 				.Execute(@"
-					UPDATE Role
-					SET
-						Name = @name
-					WHERE
-						Id = @id",
+                    UPDATE IdentityRoles
+                    SET
+                        Name = @name
+                    WHERE
+                        Id = @id",
 					new
 					{
 						name = role.Name,

@@ -4,6 +4,9 @@ using Dapper;
 
 namespace TravelMate.Data
 {
+	/// <summary>
+	/// Class that represents the UserRoles table in the Database
+	/// </summary>
 	public class UserRolesTable
 	{
 		private DbManager db;
@@ -24,7 +27,7 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public List<string> FindByUserId(int memberId)
 		{
-			return db.Connection.Query<string>("Select Role.Name from MemberRole, Role where MemberRole.MemberId=@MemberId and MemberRole.RoleId = Role.Id", new { MemberId = memberId })
+			return db.Connection.Query<string>("Select IdentityRoles.Name from IdentityUserRoles, IdentityRoles where IdentityUserRoles.UserId=@MemberId and IdentityUserRoles.RoleId = IdentityRoles.Id", new { MemberId = memberId })
 				.ToList();
 		}
 
@@ -35,7 +38,7 @@ namespace TravelMate.Data
 		/// <returns></returns>
 		public void Delete(int memberId)
 		{
-			db.Connection.Execute(@"Delete from MemberRole where Id = @MemberId", new { MemberId = memberId });
+			db.Connection.Execute(@"Delete from IdentityUserRoles where Id = @MemberId", new { MemberId = memberId });
 		}
 
 		/// <summary>
