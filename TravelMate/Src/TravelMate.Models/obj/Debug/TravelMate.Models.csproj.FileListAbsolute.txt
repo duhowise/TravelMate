@@ -1,5 +1,4 @@
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Models\bin\Debug\TravelMate.Models.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Models\bin\Debug\TravelMate.Models.pdb
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Models\obj\Debug\TravelMate.Models.csprojResolveAssemblyReference.cache
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Models\obj\Debug\TravelMate.Models.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Models\obj\Debug\TravelMate.Models.pdb

@@ -2,8 +2,10 @@ D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\TravelMate.Data.
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\TravelMate.Data.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\TravelMate.Data.pdb
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\Dapper.dll
+D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\Dapper.SimpleCRUD.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\MySql.Data.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\Dapper.xml
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\obj\Debug\TravelMate.Data.csprojResolveAssemblyReference.cache
+D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\bin\Debug\Dapper.SimpleCRUD.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\obj\Debug\TravelMate.Data.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Data\obj\Debug\TravelMate.Data.pdb
