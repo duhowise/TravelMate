@@ -15,10 +15,7 @@ D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\TravelMate.Web.dll.conf
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\TravelMate.Web.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\TravelMate.Web.pdb
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Antlr3.Runtime.dll
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\EntityFramework.dll
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\EntityFramework.SqlServer.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.Core.dll
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.Owin.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.Owin.dll
@@ -58,11 +55,8 @@ D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\System.Web.WebPages.Dep
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\System.Web.WebPages.Razor.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Antlr3.Runtime.pdb
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Newtonsoft.Json.xml
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\EntityFramework.xml
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\EntityFramework.SqlServer.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.Core.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.Owin.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\VS\Repos\TravelMate\TravelMate\Src\TravelMate.Web\bin\Microsoft.Owin.Security.xml
