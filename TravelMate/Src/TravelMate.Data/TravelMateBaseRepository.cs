@@ -9,34 +9,35 @@ namespace TravelMate.Data
 {
 	public class TravelMateBaseRepository:IRepository
 	{
+
+		private DbManager _db;
+
+		public TravelMateBaseRepository(DbManager dbManager)
+		{
+			_db = dbManager;
+		}
 		public IEnumerable<T> GetAll<T>()
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using (var connection = _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						connection.Open();
-				return  connection.GetList<T>();
+				return _db.Connection.GetList<T>();
 			}
 		}
 
 		public async Task<IEnumerable<T>> GetAllAsync<T>()
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using (_db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						await	connection.OpenAsync();
-				return await connection.GetListAsync<T>();
+				return await _db.Connection.GetListAsync<T>();
 			}
 		}
 
 		public T Insert<T>(T member)
 		{
 			int? id = 0;
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						connection.Open();
-				id= connection.Insert(member);
+				id= _db.Connection.Insert(member);
 			}
 			return GetById<T>(Convert.ToInt32(id));
 		}
@@ -44,72 +45,58 @@ namespace TravelMate.Data
 		public async Task<T> InsertAsync<T>(T member)
 		{
 			int? id = 0;
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						await connection.OpenAsync();
-				id =await connection.InsertAsync(member);
+				id =await _db.Connection.InsertAsync(member);
 			}
 			return await GetByIdAsync<T>(Convert.ToInt32(id));
 		}
 
 		public T GetById<T>(int item)
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						connection.Open();
-				return  connection.Get<T>(item);
+				return _db.Connection.Get<T>(item);
 			}
 		}
 
 		public async Task<T> GetByIdAsync<T>(int item)
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						await	connection.OpenAsync();
-				return await connection.GetAsync<T>(item);
+				return await _db.Connection.GetAsync<T>(item);
 			}
 		}
 
 		public void Update<T>(T item)
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						connection.Open();
-				connection.Update(item);
+				_db.Connection.Update(item);
 			}
 		}
 
 		public async Task UpdateAsync<T>(T item)
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						await	connection.OpenAsync();
-			 await	connection.UpdateAsync(item);
+				await _db.Connection.UpdateAsync(item);
 			}
 		}
 
 		public void Delete<T>(T item)
 		{
-			using (var connection = new MySqlConnection( ConnectionHelper.Connectionstrig()))
+			using (_db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						connection.Open();
-				connection.Delete(item);
+				_db.Connection.Delete(item);
 			}
 		}
 
 		public async Task DeleteAsync<T>(T item)
 		{
-			using (var connection = new MySqlConnection(ConnectionHelper.Connectionstrig()))
+			using ( _db.Connection)
 			{
-				if (connection.State != ConnectionState.Open)
-						await	connection.OpenAsync();
-			await	connection.DeleteAsync(item);
+				await _db.Connection.DeleteAsync(item);
 			}
 		}
 	}
