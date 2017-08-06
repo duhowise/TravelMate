@@ -2,28 +2,28 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the FuelPurchase table.
+	/// A class which represents the fuelpurchase table.
 	/// </summary>
-	[Table("FuelPurchase")]
-	public  class FuelPurchase
+	[Table("fuelpurchase")]
+	public partial class Fuelpurchase
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  int VehicleId { get; set; }
-		public  DateTime Date { get; set; }
-		public  int DriverId { get; set; }
-		public  int FillingStationId { get; set; }
-		public  int FuelTypeId { get; set; }
-		public  decimal CostPerLitre { get; set; }
-		public  int LitresPurchased { get; set; }
-		public  decimal Amount { get; set; }
-		public  string OdometerRead { get; set; }
-		public  Vehicle Vehicle { get; set; }
-		public  Staff Staff { get; set; }
-		public  Company Company { get; set; }
-		public  Fuel Fuel { get; set; }
+		public virtual int id { get; set; }
+		public virtual int vehicleid { get; set; }
+		public virtual DateTime date { get; set; }
+		public virtual int driverid { get; set; }
+		public virtual int fillingstationid { get; set; }
+		public virtual int fueltypeid { get; set; }
+		public virtual double costperlitre { get; set; }
+		public virtual int litrespurchased { get; set; }
+		public virtual double amount { get; set; }
+		public virtual string odometerreading { get; set; }
+		public virtual Vehicle vehicle { get; set; }
+		public virtual Staff staff { get; set; }
+		public virtual Company company { get; set; }
+		public virtual Fuel fuel { get; set; }
 	}
 }

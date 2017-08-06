@@ -2,18 +2,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the InsuranceType table.
+	/// A class which represents the insurancetype table.
 	/// </summary>
-	[Table("InsuranceType")]
-	public  class InsuranceType
+	[Table("insurancetype")]
+	public partial class Insurancetype
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string name { get; set; }
-		public  IEnumerable<VehicleInsurance> VehicleInsurance { get; set; }
-		public  IEnumerable<Insurance> Insurance { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<Insurance> insurance { get; set; }
 	}
 }

@@ -2,28 +2,28 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the Expense table.
+	/// A class which represents the expense table.
 	/// </summary>
-	[Table("Expense")]
-	public  class Expense
+	[Table("expense")]
+	public partial class Expense
 	{
 		[Key]
-		public  int ID { get; set; }
-		public  int Vehicleid { get; set; }
-		public  string ServiceDescription { get; set; }
-		public  DateTime? ServiceDate { get; set; }
-		public  double? Mileage { get; set; }
-		public  bool Actual { get; set; }
-		public  bool Estimate { get; set; }
-		public  decimal Cost { get; set; }
-		public  int ShopId { get; set; }
-		public  string InvoiceNumber { get; set; }
-		public  string WarrantyNumber { get; set; }
-		public  string Notes { get; set; }
-		public  byte[] Attachment { get; set; }
-		public  Vehicle Vehicle { get; set; }
+		public virtual int id { get; set; }
+		public virtual int vehicleid { get; set; }
+		public virtual string servicedescription { get; set; }
+		public virtual DateTime? servicedate { get; set; }
+		public virtual double? mileage { get; set; }
+		public virtual bool actual { get; set; }
+		public virtual bool estimate { get; set; }
+		public virtual double cost { get; set; }
+		public virtual int shopid { get; set; }
+		public virtual string invoicenumber { get; set; }
+		public virtual string warrantynumber { get; set; }
+		public virtual string notes { get; set; }
+		public virtual string imageurl { get; set; }
+		public virtual Vehicle vehicle { get; set; }
 	}
 }

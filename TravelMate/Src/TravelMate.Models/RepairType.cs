@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the RepairType table.
+	/// A class which represents the repairtype table.
 	/// </summary>
-	[Table("RepairType")]
-	public  class RepairType
+	[Table("repairtype")]
+	public partial class Repairtype
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string name { get; set; }
-		public  IEnumerable<Repair> Repairs { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<Repair> repairs { get; set; }
 	}
 }

@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the companytype table.
+	/// A class which represents the identityroles table.
 	/// </summary>
-	[Table("companytype")]
-	public partial class Companytype
+	[Table("identityroles")]
+	public partial class Identityrole
 	{
 		[Key]
 		public virtual int Id { get; set; }
 		public virtual string Name { get; set; }
-		public virtual IEnumerable<Company> Companies { get; set; }
+		public virtual IEnumerable<Identityuserrole> identityuserroles { get; set; }
 	}
 }

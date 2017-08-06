@@ -2,18 +2,18 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the TyreType table.
+	/// A class which represents the tyretype table.
 	/// </summary>
-	[Table("TyreType")]
-	public  class TyreType
+	[Table("tyretype")]
+	public partial class Tyretype
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string name { get; set; }
-		public  IEnumerable<Vehicle> Vehicles { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<Vehicle> vehicle { get; set; }
 		
 	}
 }

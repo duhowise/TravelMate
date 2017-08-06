@@ -2,19 +2,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the Department table.
+	/// A class which represents the department table.
 	/// </summary>
-	[Table("Department")]
-	public  class Department
+	[Table("department")]
+	public partial class Department
 	{
 		[Key]
-		public  int ID { get; set; }
-		public  string Name { get; set; }
-		public  int? FacultyId { get; set; }
-		public  Faculty Faculty { get; set; }
-		public  IEnumerable<GatePass> GatePass { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<Gatepass> gatepass { get; set; }
 	}
 }

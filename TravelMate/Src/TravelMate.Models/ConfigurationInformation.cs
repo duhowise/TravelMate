@@ -1,24 +1,24 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the ConfigurationInformation table.
+	/// A class which represents the configurationinformation table.
 	/// </summary>
-	[Table("ConfigurationInformation")]
-	public  class ConfigurationInformation
+	[Table("configurationinformation")]
+	public partial class Configurationinformation
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string CompanyName { get; set; }
-		public  string Address { get; set; }
-		public  string City { get; set; }
-		public  string StateOrProvince { get; set; }
-		public  string PostalCode { get; set; }
-		public  string Country { get; set; }
-		public  string PhoneNumber { get; set; }
-		public  string FaxNumber { get; set; }
-		public  string EmailAddress { get; set; }
+		public virtual int id { get; set; }
+		public virtual string companyname { get; set; }
+		public virtual string address { get; set; }
+		public virtual string city { get; set; }
+		public virtual string stateorprovince { get; set; }
+		public virtual string postalcode { get; set; }
+		public virtual string country { get; set; }
+		public virtual string phonenumber { get; set; }
+		public virtual string faxnumber { get; set; }
+		public virtual string emailaddress { get; set; }
 	}
 }

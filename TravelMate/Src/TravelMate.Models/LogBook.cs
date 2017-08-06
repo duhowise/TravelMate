@@ -2,27 +2,27 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the LogBook table.
+	/// A class which represents the logbook table.
 	/// </summary>
-	[Table("LogBook")]
-	public  class LogBook
+	[Table("logbook")]
+	public partial class Logbook
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  int VehicleId { get; set; }
-		public  int DriverId { get; set; }
-		public  string Purpose { get; set; }
-		public  string StartLocation { get; set; }
-		public  string Destination { get; set; }
-		public  DateTime TimeStarted { get; set; }
-		public  DateTime TimeArrived { get; set; }
-		public  int? StartSpeed { get; set; }
-		public  int? FinishSpeed { get; set; }
-		public  int FuelUsed { get; set; }
-		public  Vehicle Vehicle { get; set; }
-		public  Staff Staff { get; set; }
+		public virtual int id { get; set; }
+		public virtual int Vehicleid { get; set; }
+		public virtual int Driverid { get; set; }
+		public virtual string Purpose { get; set; }
+		public virtual string Startlocation { get; set; }
+		public virtual string Destination { get; set; }
+		public virtual DateTime Timestarted { get; set; }
+		public virtual DateTime Timearrived { get; set; }
+		public virtual int? Startspeed { get; set; }
+		public virtual int? Finishspeed { get; set; }
+		public virtual int Fuelused { get; set; }
+		public virtual Vehicle Vehicle { get; set; }
+		public virtual Staff Staff { get; set; }
 	}
 }

@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the Fuel table.
+	/// A class which represents the fuel table.
 	/// </summary>
-	[Table("Fuel")]
-	public  class Fuel
+	[Table("fuel")]
+	public partial class Fuel
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string Name { get; set; }
-		public  IEnumerable<FuelPurchase> FuelPurchase { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<Fuelpurchase> fuelpurchase { get; set; }
 	}
 }

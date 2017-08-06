@@ -2,25 +2,26 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the Insurance table.
+	/// A class which represents the insurance table.
 	/// </summary>
-	[Table("Insurance")]
-	public  class Insurance
+	[Table("insurance")]
+	public partial class Insurance
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  int? VehicleId { get; set; }
-		public  string PolicyNo { get; set; }
-		public  string Com { get; set; }
-		public  int? Type { get; set; }
-		public  decimal? Cost { get; set; }
-		public  DateTime? IssueDate { get; set; }
-		public  DateTime? ExpiryDate { get; set; }
-		public  string Remarks { get; set; }
-		public  Vehicle Vehicle { get; set; }
-		public  InsuranceType InsuranceType { get; set; }
+		public virtual int id { get; set; }
+		public virtual int? vehicleid { get; set; }
+		public virtual string policyno { get; set; }
+		public virtual int? issuerid { get; set; }
+		public virtual int? typeid { get; set; }
+		public virtual double? cost { get; set; }
+		public virtual DateTime? issuedate { get; set; }
+		public virtual DateTime? expirydate { get; set; }
+		public virtual string remarks { get; set; }
+		public virtual Vehicle vehicle { get; set; }
+		public virtual Company company { get; set; }
+		public virtual Insurancetype insurancetype { get; set; }
 	}
 }

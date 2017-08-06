@@ -2,17 +2,18 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the BatteryType table.
+	///     A class which represents the batterytype table.
 	/// </summary>
-	[Table("BatteryType")]
-	public  class BatteryType
+	[Table("batterytype")]
+	public class Batterytype
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string name { get; set; }
-		public  IEnumerable<Vehicle> Vehicle { get; set; }
+		public virtual int Id { get; set; }
+
+		public virtual string Name { get; set; }
+		public virtual IEnumerable<Vehicle> Vehicles { get; set; }
 	}
 }

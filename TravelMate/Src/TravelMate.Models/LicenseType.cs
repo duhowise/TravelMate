@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the LicenseType table.
+	/// A class which represents the licensetype table.
 	/// </summary>
-	[Table("LicenseType")]
-	public  class LicenseType
+	[Table("licensetype")]
+	public partial class Licensetype
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string name { get; set; }
-		public  IEnumerable<License> License { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual IEnumerable<License> license { get; set; }
 	}
 }

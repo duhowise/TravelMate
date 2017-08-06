@@ -2,30 +2,30 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the GatePass table.
+	/// A class which represents the gatepass table.
 	/// </summary>
-	[Table("GatePass")]
-	public  class GatePass
+	[Table("gatepass")]
+	public partial class Gatepass
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  int Departmentid { get; set; }
-		public  string PassCode { get; set; }
-		public  int vehicleId { get; set; }
-		public  int DriverId { get; set; }
-		public  DateTime DateIssued { get; set; }
-		public  string Destination { get; set; }
-		public  string Purpose { get; set; }
-		public  bool Approved { get; set; }
-		public  int ApprovedBy { get; set; }
-		public  DateTime CheckOutTime { get; set; }
-		public  DateTime ReturnDate { get; set; }
-		public  string Remarks { get; set; }
-		public  Department Department { get; set; }
-		public  Vehicle Vehicle { get; set; }
-		public  Staff Staff { get; set; }
+		public virtual int id { get; set; }
+		public virtual int departmentid { get; set; }
+		public virtual string passcode { get; set; }
+		public virtual int vehicleid { get; set; }
+		public virtual int driverid { get; set; }
+		public virtual DateTime dateissued { get; set; }
+		public virtual string destination { get; set; }
+		public virtual string purpose { get; set; }
+		public virtual bool approved { get; set; }
+		public virtual int approvedby { get; set; }
+		public virtual DateTime checkouttime { get; set; }
+		public virtual DateTime returndate { get; set; }
+		public virtual string remarks { get; set; }
+		public virtual Department department { get; set; }
+		public virtual Vehicle vehicle { get; set; }
+		public virtual Staff staff { get; set; }
 	}
 }

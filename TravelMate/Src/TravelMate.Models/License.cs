@@ -2,23 +2,23 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the License table.
+	/// A class which represents the license table.
 	/// </summary>
-	[Table("License")]
-	public  class License
+	[Table("license")]
+	public partial class License
 	{
 		[Key]
-		public  int id { get; set; }
-		public  int StaffId { get; set; }
-		public  int typeId { get; set; }
-		public  string LicenseNo { get; set; }
-		public  bool? Temporary { get; set; }
-		public  DateTime Issued { get; set; }
-		public  DateTime Expiry { get; set; }
-		public  Staff Staff { get; set; }
-		public  LicenseType LicenseType { get; set; }
+		public virtual int id { get; set; }
+		public virtual int staffid { get; set; }
+		public virtual int licencetypeid { get; set; }
+		public virtual string licenseno { get; set; }
+		public virtual bool? temporary { get; set; }
+		public virtual DateTime issued { get; set; }
+		public virtual DateTime expiry { get; set; }
+		public virtual Staff staff { get; set; }
+		public virtual Licensetype licensetype { get; set; }
 	}
 }

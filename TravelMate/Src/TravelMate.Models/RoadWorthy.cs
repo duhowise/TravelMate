@@ -2,20 +2,20 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the RoadWorthy table.
+	/// A class which represents the roadworthy table.
 	/// </summary>
-	[Table("RoadWorthy")]
-	public  class RoadWorthy
+	[Table("roadworthy")]
+	public partial class Roadworthy
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  int? VehicleId { get; set; }
-		public  DateTime? IssueDate { get; set; }
-		public  DateTime? RenewalDate { get; set; }
-		public  int? DriverId { get; set; }
-		public  Vehicle Vehicle { get; set; }
+		public virtual int id { get; set; }
+		public virtual int? vehicleid { get; set; }
+		public virtual DateTime? issuedate { get; set; }
+		public virtual DateTime? renewaldate { get; set; }
+		public virtual int? driverid { get; set; }
+		public virtual Vehicle vehicle { get; set; }
 	}
 }

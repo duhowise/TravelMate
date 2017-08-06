@@ -3,54 +3,51 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the Vehicle table.
+	/// A class which represents the vehicle table.
 	/// </summary>
-	[Table("Vehicle")]
-	public  class Vehicle
+	[Table("vehicle")]
+	public partial class Vehicle
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string Make { get; set; }
-		public  string Model { get; set; }
-		public  int? Year { get; set; }
-		public  string Color { get; set; }
-		public  string VehicleNumber { get; set; }
-		public  string VinNumber { get; set; }
-		public  int TypeId { get; set; }
-		public  DateTime PurchaseDate { get; set; }
-		public  decimal PurchasePrice { get; set; }
-		public  double? PurchaseMileage { get; set; }
-		public  byte[] Attachments { get; set; }
-		public  string Description { get; set; }
-		public  string GrossWeight { get; set; }
-		public  string EngineSize { get; set; }
-		public  string EngineCapacity { get; set; }
-		public  int FrontTyreType { get; set; }
-		public  int? RearTyreType { get; set; }
-		public  string State { get; set; }
-		public  int? TransmissionType { get; set; }
-		public  int? Batterytype { get; set; }
-		public  int? Filtertype { get; set; }
-		public  int? BatteryCount { get; set; }
-		public  int? FilterCount { get; set; }
-		public  int? FrontTyreCount { get; set; }
-		public  int? RearTyreCount { get; set; }
-
-
-		public  VehicleType VehicleType { get; set; }
-		public  TyreType TyreType { get; set; }
-		public  VehicleTranmission VehicleTranmission { get; set; }
-		public  BatteryType BatteryType { get; set; }
-		public  IEnumerable<LogBook> LogBook { get; set; }
-		public  IEnumerable<Repair> Repairs { get; set; }
-		public  IEnumerable<VehicleInsurance> VehicleInsurance { get; set; }
-		public  IEnumerable<RoadWorthy> RoadWorthy { get; set; }
-		public  IEnumerable<Expense> Expense { get; set; }
-		public  IEnumerable<FuelPurchase> FuelPurchase { get; set; }
-		public  IEnumerable<GatePass> GatePass { get; set; }
-		public  IEnumerable<Insurance> Insurance { get; set; }
+		public virtual int id { get; set; }
+		public virtual string make { get; set; }
+		public virtual string model { get; set; }
+		public virtual int? year { get; set; }
+		public virtual string color { get; set; }
+		public virtual string vehiclenumber { get; set; }
+		public virtual string vinnumber { get; set; }
+		public virtual int typeid { get; set; }
+		public virtual DateTime purchasedate { get; set; }
+		public virtual double purchaseprice { get; set; }
+		public virtual double? purchasemileage { get; set; }
+		public virtual byte[] attachments { get; set; }
+		public virtual string description { get; set; }
+		public virtual string grossweight { get; set; }
+		public virtual string enginesize { get; set; }
+		public virtual string enginecapacity { get; set; }
+		public virtual int fronttyretype { get; set; }
+		public virtual int? reartyretype { get; set; }
+		public virtual string state { get; set; }
+		public virtual int? transmissiontype { get; set; }
+		public virtual int? batterytypeid { get; set; }
+		public virtual int? filtertype { get; set; }
+		public virtual int? batterycount { get; set; }
+		public virtual int? filtercount { get; set; }
+		public virtual int? fronttyrecount { get; set; }
+		public virtual int? reartyrecount { get; set; }
+		public virtual Vehicletype vehicletype { get; set; }
+		public virtual Tyretype tyretype { get; set; }
+		public virtual Vehicletranmission vehicletranmission { get; set; }
+		public virtual Batterytype batterytype { get; set; }
+		public virtual IEnumerable<Insurance> insurance { get; set; }
+		public virtual IEnumerable<Roadworthy> roadworthy { get; set; }
+		public virtual IEnumerable<Repair> repairs { get; set; }
+		public virtual IEnumerable<Gatepass> gatepass { get; set; }
+		public virtual IEnumerable<Expense> expense { get; set; }
+		public virtual IEnumerable<Fuelpurchase> fuelpurchase { get; set; }
+		public virtual IEnumerable<Logbook> logbook { get; set; }
 	}
 }

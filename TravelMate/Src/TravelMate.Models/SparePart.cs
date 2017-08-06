@@ -2,19 +2,19 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TravelMate.Models
+namespace TravelMate.Web.Models
 {
 	/// <summary>
-	/// A class which represents the SpareParts table.
+	/// A class which represents the spareparts table.
 	/// </summary>
-	[Table("SpareParts")]
-	public  class SparePart
+	[Table("spareparts")]
+	public partial class Sparepart
 	{
 		[Key]
-		public  int Id { get; set; }
-		public  string Name { get; set; }
-		public  string Description { get; set; }
-		public  int Quantity { get; set; }
-		public  IEnumerable<IssuedSparePart> IssuedSpareParts { get; set; }
+		public virtual int id { get; set; }
+		public virtual string name { get; set; }
+		public virtual string description { get; set; }
+		public virtual int quantity { get; set; }
+		public virtual IEnumerable<Issuedsparepart> issuedspareparts { get; set; }
 	}
 }
